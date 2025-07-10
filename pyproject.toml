@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygments-pbat-lexer"
+version = "0.1.0"
+description = "A Pygments lexer for Crystal Chip PBAT files"
+requires-python = ">=3.7"
+license = {text= "MIT"}
+authors = [
+    {name="tech"}
+]
+dependencies = ["pygments"]
+
+[project.entry-points."pygments.lexers"]
+batch = "pygments_pbat.lexer:PBatLexer"
+
+[tool.setuptools.packages.find]
+where = ["."]
