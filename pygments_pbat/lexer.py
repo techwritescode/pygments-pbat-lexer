@@ -19,9 +19,9 @@ class PBatLexer(RegexLexer):
             (r'\s+', Text),
         ],
         'string': [
-            (r'^"', Literal.String.Escape),
+            (r'\^"', Literal.String.Escape),
             (r'\$[a-zA-Z0-9_.]+\$', Name.Variable),
-            (r'[^"$]+', String.Double),
+            (r'[^\^"$]+', String.Double),
             (r'"', String.Double, '#pop')
         ]
     }
